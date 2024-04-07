@@ -2,30 +2,32 @@ drwxr-xr-x  3 root root  36 Apr  7 07:10 .
 drwxr-xr-x  8 root root 166 Apr  7 07:12 .git
 [root@ip-172-31-38-6 vel-app]# vi jenkinsfile
 
-pipeline{
+pipeline {
 
-   agent any 
+   agent {
+             label "slave-1"
+}
    
-     stages{
+     stages {
    
-         stage('stage-1'){
+         stage('stage-1') {
 	  
 	                steps {
-		                        echo "this is file"
+		                        echo "this is file stage-1"
 		 }
 	   
 	  }
-	  stage('stage-2'){
+	  stage('stage-2') {
 	  
 	                steps {
-		                        echo "this is file"
+		                        echo "this is file stage-2"
 		 }
 	   
 	  }
-	  stage('stage-3'){
+	  stage('stage-3') {
 	  
 	                steps {
-		                        echo "this is file"
+		                        echo "this is file stage-3"
 		 }
 	   
 	  }
