@@ -5,7 +5,7 @@ drwxr-xr-x  8 root root 166 Apr  7 07:12 .git
 pipeline {
 
    agent {
-             label "slave-1"
+             label "built-in"
 }
    
      stages {
